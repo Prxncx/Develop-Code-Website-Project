@@ -36,6 +36,11 @@ img {
   object-fit: fill;
 }
 
+iframe {
+    display: block;
+    border-style:none;
+}
+
 /*  */
 .wrapper{
   display: flex;
