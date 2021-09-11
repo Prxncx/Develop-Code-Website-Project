@@ -7,8 +7,8 @@
 }
 
 body{
-  margin: 64px 64px;
-  padding: 64px 64px;
+  margin: 32px 32px;
+  padding: 32px 32px;
 }
 
 #videobg{
@@ -64,7 +64,9 @@ a {
 }
 .wrapper .static-txt{
   color: #fff;
-  font-size: 55px;
+  font-size: 70px;
+  text-align: right;
+  right: 0;
 }
 .wrapper .dynamic-txts{
   margin-left: 45px;
@@ -73,12 +75,18 @@ a {
   overflow: hidden;
 }
 .dynamic-txts li{
+  width: 100%;
+  height: auto;
+  object-fit: fill;
   list-style: none;
   color: yellow;
-  font-size: 65px;
+  font-size: 70px;
   position: relative;
   top: 0px;
-  animation: slide 12s steps(4) infinite;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  animation: slide 4s steps(4) infinite;
 }
 @keyframes slide {
   100%{
