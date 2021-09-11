@@ -157,69 +157,69 @@ h3{
   display: flex;
   justify-content: space-between;
   color: white;
-  font-size: 14px; 
+  font-size: 12px; 
 }
 
 .homepage_introduction{
   bottom: 0;
   text-align: center; 
   color: white;
-  font-size: 14px;  
+  font-size: 12px;  
 }
 
 .follow_me{
   display: flex;
   justify-content: space-between;
   color: white;
-  font-size: 14px; 
+  font-size: 12px; 
 }
 
 /* the following linces pertain to elements for Discovery.html */
 .introduction{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
 .about_me{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
 .interests{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
 .competencies{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
 .goals{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
 .code_nation{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
 .challenges{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
 .prospects{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
@@ -263,24 +263,24 @@ h3{
 /* the following linces pertain to elements for Contact_Me.html */
 .contact_details{
   color:white;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .disclaimer{
   color:white;
-  font-size: 12px;
+  font-size: 10px;
   text-align: justify;
 }
 
 .ts_and_cs{
   color:white;
-  font-size: 12px;
+  font-size: 10px;
   text-align: justify;
 }
 
 .copyright{
   color:white;
-  font-size: 12px;
+  font-size: 10px;
   text-align: justify;
 }
 
