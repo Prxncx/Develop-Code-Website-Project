@@ -8,7 +8,14 @@
 
 body{
   margin: 0;
-  padding: 0;
+  padding: 0px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 128px;
+  padding: 0 128px;
 }
 
 #videobg {
