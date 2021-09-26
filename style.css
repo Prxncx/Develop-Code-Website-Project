@@ -7,27 +7,113 @@
 }
 
 body{
-  margin: 32px 32px;
-  padding: 32px 32px;
+  margin: 0;
+  padding: 0;
 }
 
-#videobg{
+#videobg {
   position: fixed;
-  z-index: -1;
+  z-index: -1000;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  top:50%;
-  left:50%;
-  transform: translate(-50% , -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(
+      -50%, 
+      -50%);
   background: black;
 }
 
 @media{
-  .background-video{
+.background-video{
   width: 100%;
   height: 100%;
   }
+}
+
+/* navbar container */
+#navbarContainer {
+  width: 100%;
+  height: 100%;
+  /* smooth scroll */
+  overflow-y: scroll; /* sets the scroll mechanism vertically */
+  scroll-behavior: smooth; /* sets the scroll behavior to smooth */
+  scroll-snap-type: y mandatory; /* forces the scroll snap vertically */
+}
+
+/* navbar styling */
+#navbar {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  position: fixed;
+  top: 0;
+  z-index: 1; 
+  background: rgba(0, 0, 0, 0.438);
+  /*  */
+}
+
+/* navbar logo */
+#navbarLogo {
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to top, rgb(128, 127, 127) 0%, rgba(131, 127, 127, 0.144) 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  position: fixed;
+  display: flex;
+  padding: 16px;
+}
+  
+/* navbar link(s) */
+#navbarLinks {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  list-style: none;
+  transition: all 0.3s ease;  
+  position: fixed;  
+}
+
+/* navbar link */
+.navbarLink {
+  display: flex;
+  margin: 0 1rem;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* subscribe button */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 4px 16px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background: #ffffff;
+  background: -webkit-linear-gradient(to right, #ffffff, #ffffff, #ffffff);
+  background: linear-gradient(to right, #5f5f5f9d, #2c2b2c, #363536);
+  color: rgba(255, 255, 255, 0.726);
+  transition: all 0.3s ease;
+/*  */
 }
 
 img {
@@ -42,45 +128,45 @@ iframe {
     width: 100%;
 }
 
-p {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: justify;
-}
-
-a {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: justify;
-}
-
 /*  */
 .wrapper{
   display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin: 320px 128px;
+  border: 128px;
 }
+
+.static-txt {
+  line-height: 120px;
+}
+
+.dynamic-txts {
+  line-height: 120px;
+}
+
 .wrapper .static-txt{
   color: #fff;
-  font-size: 70px;
+  font-size: 32px;
   text-align: right;
   right: 0;
 }
+
 .wrapper .dynamic-txts{
-  margin-left: 45px;
+  margin-left: 0px;
   height: 90px;
-  line-height: 90px;
+  line-height: 30px;
   overflow: hidden;
 }
+
 .dynamic-txts li{
   width: 100%;
   height: auto;
   object-fit: fill;
   list-style: none;
   color: yellow;
-  font-size: 70px;
+  font-size: 32px;
   position: relative;
   top: 0px;
   right: 0px;
@@ -88,6 +174,7 @@ a {
   bottom: 0px;
   animation: slide 4s steps(4) infinite;
 }
+
 @keyframes slide {
   100%{
     top: -360px;
@@ -95,7 +182,7 @@ a {
 }
 .dynamic-txts li span{
   position: relative;
-  margin: 5px 0;
+  margin: 0;
   line-height: 90px;
 }
 .dynamic-txts li span::after{
@@ -106,11 +193,11 @@ a {
   width: 100%;
   background: black;
   border-left: 0px solid yellow;
-  animation: typing 3s steps(10) infinite;
+  animation: typing 2s steps(10) infinite;
 }
 @keyframes typing {
   40%, 60%{
-    left: calc(100% + 30px);
+    left: calc(100% + 16px);
   }
   100%{
     left: 0;
@@ -151,27 +238,21 @@ h3{
   color:white;
   text-align: center;
   align-content: center;
-}
-
-.nav_bar{
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  font-size: 12px; 
-}
-
-.homepage_introduction{
-  bottom: 0;
-  text-align: center; 
-  color: white;
+  justify-content: center;
+  margin: 32px 0;
+  border: 32px 0;
   font-size: 12px;  
 }
 
 .follow_me{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   color: white;
   font-size: 12px; 
+  position: bottom;
+  padding: 16px 32px;
+  margin: 0px;
 }
 
 /* the following linces pertain to elements for Discovery.html */
