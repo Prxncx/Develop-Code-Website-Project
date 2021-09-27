@@ -1,26 +1,24 @@
-/* the following lines pertain to universal elements for the website */
-
+/* font */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
+
+/* universal styling */
 * {
  margin: 0;
  padding: 0;
 }
 
+/* body styling */
 body {
- font-family: "Comfortaa", cursive;
- background: black;
- height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: black;
+    height: 100vh;
+    /* hide scrollbar*/
+    overflow: hidden;    
 }
 
-section {
- display: flex;
- flex-direction: column;
- margin: 0 128px;
- padding: 0 128px;
- scroll-snap-align: center;
-}
-
+/* videobg */
 #videobg {
  position: fixed;
  z-index: -1000;
@@ -40,17 +38,33 @@ section {
  }
 }
 
-/* navbar container */
+/* container */
 #container {
- width: 100%;
- height: 100%;
- /* smooth scroll */
- overflow-y: scroll; /* sets the scroll mechanism vertically */
- scroll-behavior: smooth; /* sets the scroll behavior to smooth */
- scroll-snap-type: y mandatory;
+    width: 100%;
+    height: 100%;
+    /* smooth scroll */
+    overflow-y: scroll; /* sets the scroll mechanism vertically */
+    scroll-behavior: smooth; /* sets the scroll behavior to smooth */
+    scroll-snap-type: y mandatory; /* forces the scroll snap vertically */
 }
 
-/* navbar styling */
+/* section */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 1;
+    scroll-snap-align: center;
+    color: white;
+    font-size: 14px;
+    margin: 0 128px;
+    padding: 0 128px;
+}
+
+/* navbar */
 #navbar {
  width: 100%;
  height: 32px;
@@ -62,10 +76,8 @@ section {
  top: 0;
  z-index: 1;
  background: rgba(0, 0, 0, 0.438);
- /*  */
 }
 
-/* navbar logo */
 #navbarLogo {
  background-color: rgb(255, 255, 255);
  background-image: linear-gradient(
@@ -88,7 +100,6 @@ section {
  padding: 16px;
 }
 
-/* navbar link(s) */
 #navbarLinks {
  color: black;
  display: flex;
@@ -100,8 +111,6 @@ section {
  transition: all 0.3s ease;
  position: fixed;
 }
-
-/* navbar link */
 .navbarLink {
  display: flex;
  margin: 0 1rem;
@@ -110,19 +119,7 @@ section {
  text-decoration: none;
 }
 
-img {
- width: 100%;
- height: auto;
- object-fit: fill;
-}
-
-iframe {
- display: block;
- border-style: none;
- width: 100%;
-}
-
-/*  */
+/*  animated text*/
 .wrapper {
  display: flex;
  margin: 128px 128px;
@@ -165,6 +162,7 @@ iframe {
   top: -360px;
  }
 }
+
 .dynamic-txts li span {
  line-height: 90px;
 }
@@ -182,7 +180,8 @@ iframe {
   left: 0;
  }
 }
-/*  */
+
+/* links */
 a:link,
 a:visited {
  color: white;
@@ -196,13 +195,13 @@ a:hover {
  color: yellow;
 }
 
+/* headings */
 h1 {
  color: yellow;
  font-size: 64px;
 }
 
 h2 {
- color: white;
  font-size: 32px;
 }
 h3 {
@@ -210,164 +209,17 @@ h3 {
  color: yellow;
 }
 
-/* the following lines pertain to elements for Index.html */
-
-.homepage_introduction {
- color: white;
- text-align: center;
- align-content: center;
- justify-content: center;
- margin: 32px 0;
- border: 32px 0;
- font-size: 12px;
-}
-
-.follow_me {
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- color: white;
- font-size: 12px;
- position: bottom;
- padding: 16px 32px;
- margin: 0px;
-}
-
-/* the following linces pertain to elements for Discovery.html */
-.introduction {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-.about_me {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-.interests {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-.competencies {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-.goals {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-.code_nation {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-.challenges {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-.prospects {
- color: white;
- font-size: 12px;
- text-align: left;
-}
-
-/* the following linces pertain to elements for Learning_and_Projects.html */
-.week_1 {
- color: white;
- font-size: 12px;
-}
-
-.project_1 {
- color: white;
- font-size: 12px;
-}
-
-.cash_machine {
- color: white;
- font-size: 12px;
-}
-
-.week_2 {
- color: white;
- font-size: 12px;
-}
-
-.project_2 {
- color: white;
- font-size: 12px;
-}
-
-.code_based_text_game {
- color: white;
- font-size: 12px;
-}
-
-.week_3 {
- color: white;
- font-size: 12px;
-}
-
-.project_3 {
- color: white;
- font-size: 12px;
-}
-
-.website {
- color: white;
- font-size: 12px;
-}
-
-/* the following linces pertain to elements for Contact_Me.html */
-.contact_details {
- color: white;
- font-size: 12px;
-}
-
+/* about */
 .disclaimer {
- color: white;
- font-size: 10px;
- text-align: justify;
+    font-size: 10px;
+    text-align: justify;
 }
 
 .ts_and_cs {
- color: white;
- font-size: 10px;
- text-align: justify;
+    font-size: 10px;
+    text-align: justify;
 }
 
 .copyright {
- color: white;
- font-size: 10px;
- text-align: justify;
-}
-
-.container_1 {
- display: flex;
- flex-direction: column;
-}
-
-.container_2 {
- display: flex;
- flex-direction: column;
-}
-
-.container_3 {
- display: flex;
- flex-direction: column;
-}
-
-.container_4 {
- display: flex;
- flex-direction: column;
+    font-size: 10px;
 }
