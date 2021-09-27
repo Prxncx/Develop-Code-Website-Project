@@ -117,65 +117,6 @@ iframe {
     width: 100%;
 }
 
-/* animated text */
-.wrapper{
-  display: flex;
-  margin: 128px 128px;
-  border: 128px;
-}
-
-.static-txt {
-  line-height: 120px;
-}
-
-.dynamic-txts {
-  line-height: 120px;
-}
-
-.wrapper .static-txt{
-  color: #fff;
-  font-size: 32px;
-}
-
-.wrapper .dynamic-txts{
-  height: 90px;
-  line-height: 30px;
-  overflow: hidden;
-}
-
-.dynamic-txts li{
-  list-style: none;
-  color: yellow;
-  font-size: 32px;
-  position: relative;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
-  animation: slide 4s steps(4) infinite;
-}
-
-@keyframes slide {
-  100%{
-    top: -360px;
-  }
-}
-.dynamic-txts li span{
-  line-height: 90px;
-}
-.dynamic-txts li span::after{
-  content: "";
-  background: black;
-  animation: typing 2s steps(10) infinite;
-}
-@keyframes typing {
-  40%, 60%{
-    left: calc(100% + 16px);
-  }
-  100%{
-    left: 0;
-  }
-}
  /* links */
 a:link, a:visited{
   color:white
