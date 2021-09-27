@@ -105,24 +105,6 @@ section {
   text-decoration: none;
 }
 
-/* subscribe button */
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 4px 16px;
-  border: none;
-  outline: none;
-  border-radius: 16px;
-  background: #ffffff;
-  background: -webkit-linear-gradient(to right, #ffffff, #ffffff, #ffffff);
-  background: linear-gradient(to right, #5f5f5f9d, #2c2b2c, #363536);
-  color: rgba(255, 255, 255, 0.726);
-  transition: all 0.3s ease;
-/*  */
-}
-
 img {
   width: 100%;
   height: auto;
@@ -138,10 +120,7 @@ iframe {
 /*  */
 .wrapper{
   display: flex;
-  text-align: center;
-  align-content: center;
-  justify-content: center;
-  margin: 320px 128px;
+  margin: 128px 128px;
   border: 128px;
 }
 
@@ -156,21 +135,15 @@ iframe {
 .wrapper .static-txt{
   color: #fff;
   font-size: 32px;
-  text-align: right;
-  right: 0;
 }
 
 .wrapper .dynamic-txts{
-  margin-left: 0px;
   height: 90px;
   line-height: 30px;
   overflow: hidden;
 }
 
 .dynamic-txts li{
-  width: 100%;
-  height: auto;
-  object-fit: fill;
   list-style: none;
   color: yellow;
   font-size: 32px;
@@ -188,18 +161,11 @@ iframe {
   }
 }
 .dynamic-txts li span{
-  position: relative;
-  margin: 0;
   line-height: 90px;
 }
 .dynamic-txts li span::after{
   content: "";
-  position: relative;
-  left: 0;
-  height: 100%;
-  width: 100%;
   background: black;
-  border-left: 0px solid yellow;
   animation: typing 2s steps(10) infinite;
 }
 @keyframes typing {
