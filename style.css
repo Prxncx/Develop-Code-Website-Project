@@ -69,8 +69,8 @@ section {
 
 /* navbar logo */
 #navbarLogo {
-  background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to top, rgb(128, 127, 127) 0%, rgba(131, 127, 127, 0.144) 100%);
+  background-color: yellow;
+  background-image: linear-gradient(to top, rgb(158, 157, 78) 0%, rgba(131, 127, 127, 0.144) 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
