@@ -1,225 +1,361 @@
-/* font */
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+/* the following lines pertain to universal elements for the website */
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-/* universal styling */
-* {
- margin: 0;
- padding: 0;
+*{
+  font-family: 'Comfortaa', cursive;
+  margin: 0;
+  padding: 0;
 }
 
-/* body styling */
+body{
+  margin: 0;
+  padding: 0px;
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: white;
-    color: black;
-    height: 100vh;
-    /* hide scrollbar*/
-    overflow: hidden;    
+  font-family: 'Comfortaa', cursive;
+  background: black;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* videobg */
+section {
+@ -16,6 +19,7 @@ section {
+  flex-direction: column;
+  margin: 0 128px;
+  padding: 0 128px;
+  scroll-snap-align: center;
+}
+
 #videobg {
- position: fixed;
- z-index: -1000;
- width: 100%;
- height: 100%;
- object-fit: cover;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- background: black;
+@ -40,329 +44,329 @@
 }
 
-@media {
- .background-video {
+/* navbar container */
+#navbarContainer {
+#container {
   width: 100%;
   height: 100%;
- }
+  /* smooth scroll */
+  overflow-y: scroll; /* sets the scroll mechanism vertically */
+  scroll-behavior: smooth; /* sets the scroll behavior to smooth */
+  scroll-snap-type: y mandatory; /* forces the scroll snap vertically */
+  scroll-snap-type: y mandatory; 
 }
 
-/* container */
-#container {
-    width: 100%;
-    height: 100%;
-    /* smooth scroll */
-    overflow-y: scroll; /* sets the scroll mechanism vertically */
-    scroll-behavior: smooth; /* sets the scroll behavior to smooth */
-    scroll-snap-type: y mandatory; /* forces the scroll snap vertically */
-}
-
-/* section */
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    height: 100vh;
-    z-index: 1;
-    scroll-snap-align: center;
-    color: white;
-    font-size: 14px;
-    margin: 0 128px;
-    padding: 0 128px;
-}
-
-/* navbar */
+/* navbar styling */
 #navbar {
- width: 100%;
- height: 32px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- font-size: 0.8rem;
- position: fixed;
- top: 0;
- z-index: 1;
- background: rgba(0, 0, 0, 0.438);
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  position: fixed;
+  top: 0;
+  z-index: 1; 
+  background: rgba(0, 0, 0, 0.438);
+  /*  */
 }
 
+/* navbar logo */
 #navbarLogo {
- background-color: rgb(255, 255, 255);
- background-image: linear-gradient(
-  to top,
-  rgb(128, 127, 127) 0%,
-  rgba(131, 127, 127, 0.144) 100%
- );
- background-size: 100%;
- -webkit-background-clip: text;
- -moz-background-clip: text;
- -webkit-text-fill-color: transparent;
- -moz-text-fill-color: transparent;
- display: flex;
- align-items: center;
- cursor: pointer;
- text-decoration: none;
- font-size: 1rem;
- position: fixed;
- display: flex;
- padding: 16px;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to top, rgb(128, 127, 127) 0%, rgba(131, 127, 127, 0.144) 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  position: fixed;
+  display: flex;
+  padding: 16px;
 }
-
+  
+/* navbar link(s) */
 #navbarLinks {
- color: black;
- display: flex;
- align-items: center;
- justify-content: center;
- text-decoration: none;
- width: 100%;
- list-style: none;
- transition: all 0.3s ease;
- position: fixed;
-}
-.navbarLink {
- display: flex;
- margin: 0 1rem;
- padding: 1rem;
- color: rgb(0, 0, 0);
- text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  list-style: none;
+  transition: all 0.3s ease;  
+  position: fixed;  
 }
 
-/*  animated text*/
-.wrapper {
- display: flex;
- margin: 128px 128px;
- border: 128px;
+/* navbar link */
+.navbarLink {
+  display: flex;
+  margin: 0 1rem;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+iframe {
+    display: block;
+    border-style:none;
+    width: 100%;
+}
+
+/*  */
+.wrapper{
+  display: flex;
+  margin: 128px 128px;
+  border: 128px;
 }
 
 .static-txt {
- line-height: 120px;
+  line-height: 120px;
 }
 
 .dynamic-txts {
- line-height: 120px;
+  line-height: 120px;
 }
 
-.wrapper .static-txt {
- color: #fff;
- font-size: 32px;
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 32px;
 }
 
-.wrapper .dynamic-txts {
- height: 90px;
- line-height: 30px;
- overflow: hidden;
+.wrapper .dynamic-txts{
+  height: 90px;
+  line-height: 30px;
+  overflow: hidden;
 }
 
-.dynamic-txts li {
- list-style: none;
- color: yellow;
- font-size: 32px;
- position: relative;
- top: 0px;
- right: 0px;
- left: 0px;
- bottom: 0px;
- animation: slide 4s steps(4) infinite;
+.dynamic-txts li{
+  list-style: none;
+  color: yellow;
+  font-size: 32px;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  animation: slide 4s steps(4) infinite;
 }
 
 @keyframes slide {
- 100% {
-  top: -360px;
- }
+  100%{
+    top: -360px;
+  }
 }
-
-.dynamic-txts li span {
- line-height: 90px;
+.dynamic-txts li span{
+  line-height: 90px;
 }
-.dynamic-txts li span::after {
- content: "";
- background: black;
- animation: typing 2s steps(10) infinite;
+.dynamic-txts li span::after{
+  content: "";
+  background: black;
+  animation: typing 2s steps(10) infinite;
 }
 @keyframes typing {
- 40%,
- 60% {
-  left: calc(100% + 16px);
- }
- 100% {
-  left: 0;
- }
+  40%, 60%{
+    left: calc(100% + 16px);
+  }
+  100%{
+    left: 0;
+  }
+}
+ /*  */
+a:link, a:visited{
+  color:white
+} 
+
+a:any-link{
+  color: white;
 }
 
-/* links */
-a:link,
-a:visited {
- color: white;
+a:hover{
+  color: yellow;
 }
 
-a:any-link {
- color: white;
+h1{
+  color:yellow;
+  font-size: 64px;
+
 }
 
-a:hover {
- color: yellow;
+h2{
+  color: white;
+  font-size: 32px;
+
+}
+h3{
+  font-size: 16px;
+  color: yellow;
 }
 
-/* headings */
-h1 {
- color: yellow;
- font-size: 64px;
+/* the following lines pertain to elements for Index.html */
+
+.homepage_introduction{
+  color:white;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin: 32px 0;
+  border: 32px 0;
+  font-size: 12px;  
 }
 
-h2 {
- font-size: 32px;
-}
-h3 {
- font-size: 16px;
- color: yellow;
-}
-
-/* about */
-.disclaimer {
-    font-size: 10px;
-    text-align: justify;
+.follow_me{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 12px; 
+  position: bottom;
+  padding: 16px 32px;
+  margin: 0px;
 }
 
-.ts_and_cs {
-    font-size: 10px;
-    text-align: justify;
+/* the following linces pertain to elements for Discovery.html */
+.introduction{
+  color:white;
+  font-size: 12px;
+  text-align: left;
 }
 
-.copyright {
-    font-size: 10px;
+.about_me{
+  color:white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.interests{
+  color:white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.competencies{
+  color:white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.goals{
+  color:white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.code_nation{
+  color:white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.challenges{
+  color:white;
+  font-size: 12px;
+  text-align: left;
+}
+
+.prospects{
+  color:white;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* the following linces pertain to elements for Learning_and_Projects.html */
+.week_1{
+  color:white;
+  font-size: 12px;
+}
+
+.project_1{
+  color:white;
+  font-size: 12px;
+}
+
+.cash_machine{
+  color:white;
+  font-size: 12px;
+}
+
+.week_2{
+  color:white;
+  font-size: 12px;
+}
+
+.project_2{
+  color:white;
+  font-size: 12px;
+}
+
+.code_based_text_game{
+  color:white;
+  font-size: 12px;
+}
+
+.week_3{
+  color:white;
+  font-size: 12px;
+}
+
+.project_3{
+  color:white;
+  font-size: 12px;
+}
+
+.website{
+  color:white;
+  font-size: 12px;
+}
+
+/* the following linces pertain to elements for Contact_Me.html */
+.contact_details{
+  color:white;
+  font-size: 12px;
+}
+
+.disclaimer{
+  color:white;
+  font-size: 10px;
+  text-align: justify;
+}
+
+.ts_and_cs{
+  color:white;
+  font-size: 10px;
+  text-align: justify;
+}
+
+.copyright{
+  color:white;
+  font-size: 10px;
+  text-align: justify;
+}
+
+.container_1{
+  display:flex;
+  flex-direction: column;
+}
+
+.container_2{
+  display:flex;
+  flex-direction: column;
+}
+
+.container_3{
+  display:flex;
+  flex-direction: column;
+}
+
+.container_4{
+  display:flex;
+  flex-direction: column;
 }
